@@ -25,6 +25,7 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 	implementation("org.springframework.boot:spring-boot-starter-oauth2-resource-server")
 	implementation("org.springframework.boot:spring-boot-starter-security")
+	implementation("org.springframework.boot:spring-boot-starter-validation")
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("org.flywaydb:flyway-core")
 	compileOnly("org.projectlombok:lombok")
@@ -37,6 +38,9 @@ dependencies {
 	testImplementation("org.springframework.security:spring-security-test")
 	testImplementation("org.testcontainers:junit-jupiter")
 	testImplementation("org.testcontainers:postgresql")
+	testImplementation("org.testcontainers:junit-jupiter:1.19.3")
+	testImplementation("org.testcontainers:testcontainers:1.19.3")
+	testImplementation("com.github.dasniko:testcontainers-keycloak:3.2.0")
 }
 
 tasks.withType<Test> {

@@ -1,14 +1,15 @@
 spring:
   application:
     name: springboot-devservices
-#  security:
-#    oauth2:
-#      resourceserver:
-#        jwt:
-#          issuer-uri: http://localhost:8080/realms/springbootdevservices
-#          jwk-set-uri: ${spring.security.oauth2.resourceserver.jwt.issuer-uri}/protocol/openid-connect/certs
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/springbootdevservices
+          jwk-set-uri: ${spring.security.oauth2.resourceserver.jwt.issuer-uri}/protocol/openid-connect/certs
   flyway:
     validate-migration-naming: true
+    locations: classpath:db/fixture, classpath:db/migration
   jpa:
     database: postgresql
     database-platform: org.hibernate.dialect.PostgreSQLDialect
@@ -19,7 +20,10 @@ spring:
     username: dev
     password: pass
 
-#jwt:
-#  auth:
-#    converter:
-#      resource-id: bookclient
+server:
+  port : 8081
+
+jwt:
+  auth:
+    converter:
+      resource-id: bookclient
