@@ -3,7 +3,7 @@ package fr.slickteam.springbootdevservices.tests;
 import org.testcontainers.containers.PostgreSQLContainer;
 
 public class DatabaseContainer extends PostgreSQLContainer<DatabaseContainer> {
-    private static final String IMAGE_VERSION = "postgres:15-alpine";
+    private static final String IMAGE_VERSION = "postgres:15.3-alpine";
     private static DatabaseContainer container;
 
     private DatabaseContainer() {

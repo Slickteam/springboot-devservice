@@ -18,7 +18,7 @@ public class ContainersConfiguration {
     @Bean
     @ServiceConnection
     public PostgreSQLContainer<?> postgreSQLContainer() {
-        PostgreSQLContainer<?> postgreSQLContainer = new PostgreSQLContainer("postgres:15-alpine")
+        PostgreSQLContainer<?> postgreSQLContainer = new PostgreSQLContainer("postgres:15.3-alpine")
                 .withDatabaseName("springbootdevservices")
                 .withUsername("dev")
                 .withPassword("pass");
