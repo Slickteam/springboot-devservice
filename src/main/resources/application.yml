@@ -18,8 +18,3 @@ spring:
     url: ${DATABASE_URL}
     username: ${DATABASE_USER}
     password: ${DATABASE_PASSWORD}
-
-jwt:
-  auth:
-    converter:
-      resource-id: front-prep

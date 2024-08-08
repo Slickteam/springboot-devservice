@@ -1,7 +1,7 @@
 # springboot-devservice
 An example of how to configure SpringBoot to manage services at start on local dev to help and debug.
 
-It is build with Gradle Kotlin DSL, on Spring Boot 3.2.2.
+It is build with Gradle Kotlin DSL, on Spring Boot 3.3.2.
 
 
 ## What is it?
