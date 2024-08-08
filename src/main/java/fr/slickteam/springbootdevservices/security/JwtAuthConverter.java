@@ -40,11 +40,11 @@ public class JwtAuthConverter implements Converter<Jwt, AbstractAuthenticationTo
     private Collection<? extends GrantedAuthority> extractRealmRoles(Jwt jwt) {
         Map<String, Object> realmAccess = jwt.getClaim("realm_access");
         return Optional.ofNullable(realmAccess)
-                .filter(access -> access.get("roles") instanceof Collection)
-                .map(access -> (Collection<?>) access.get("roles"))
-                .stream()
-                .flatMap(Collection::stream)
-                .map(role -> new SimpleGrantedAuthority("ROLE_" + role))
-                .collect(Collectors.toSet());
+                       .filter(access -> access.get("roles") instanceof Collection)
+                       .map(access -> (Collection<?>) access.get("roles"))
+                       .stream()
+                       .flatMap(Collection::stream)
+                       .map(role -> new SimpleGrantedAuthority("ROLE_" + role))
+                       .collect(Collectors.toSet());
     }
 }

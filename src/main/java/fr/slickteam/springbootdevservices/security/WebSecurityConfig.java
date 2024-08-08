@@ -35,9 +35,9 @@ public class WebSecurityConfig {
 
     private static Customizer<AuthorizeHttpRequestsConfigurer<HttpSecurity>.AuthorizationManagerRequestMatcherRegistry> authorizeHttpRequestsConfigurer() {
         return authorize ->
-                authorize.requestMatchers(HttpMethod.GET, "/shelves/**").permitAll()
-                         .requestMatchers(HttpMethod.GET, "/books/**").permitAll()
-                         .anyRequest().authenticated();
+                authorize.requestMatchers(HttpMethod.GET, "/shelves/**").authenticated()
+                         .requestMatchers(HttpMethod.GET, "/books/**").authenticated()
+                         .anyRequest().permitAll();
     }
 
     private static Customizer<CsrfConfigurer<HttpSecurity>> csrfConfigurer() {
